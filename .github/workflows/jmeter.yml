@@ -32,4 +32,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run JMeter Test
-        run: bzt test.jmx
+        run: bzt -o reporting="[{module:'passfail',criteria:['succ<100%,stop as failed']}]" test.jmx
